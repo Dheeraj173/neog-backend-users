@@ -5,6 +5,14 @@ const port = process.env.PORT || 3000;
 const {initializeDatabase} = require("./BE1.1_CW/db/db.connect");
 const Restaurant = require("./BE1.1_CW/models/restaurants.models");
 initializeDatabase();
+const cors = require("cors");
+  const corsOptions = {
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200,
+  };
+  
+  app.use(cors(corsOptions));
 
 const restaurant1 = {
     name: "Somi",
@@ -46,7 +54,7 @@ const restaurant1 = {
         console.log("New Restaurant created: ", createNewRestaurant);
         return createNewRestaurant;
     } catch(error) {
-        console.log("Error while creating Hotel: ", error);
+        console.log("Error while creating Book: ", error);
     }
   }
 
@@ -297,5 +305,6 @@ async function updateDelieveryOfRestanrant(number, dataToUpdate) {
   }
   //deleteRestaurantByName("Som Sarovar");
 
+  
 
 app.listen(port, ()=> {console.log("server is running at port: ", port)});
