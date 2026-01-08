@@ -6,6 +6,15 @@ const {initializeDatabase} = require("./BE1.1_CW/db/db.connect");
 const Book = require("./BE1.1_CW/models/Book.models");
 initializeDatabase();
 
+const cors = require("cors");
+  const corsOptions = {
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200,
+  };
+  
+  app.use(cors(corsOptions));
+  
   async function createBook(book) {
     try {
         const newBook = new Book(book);
