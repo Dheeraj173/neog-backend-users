@@ -2,22 +2,26 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Restaurants from "../components/Restaurants";
 
-// function App() {
+export default function App() {
+return (
+        <main>
+          <h1>Hello React 🚀</h1>
+          <Restaurants />
+        </main>
+        );
+}
+
+
+  // function App() {
 //     return (
 //       <h1>Hello React 🚀</h1>
 //     )
 // }
   
 //   export default App;
-import Restaurants from "./components/Restaurants";
 
-export default function App() {
-return <main>
-    <Restaurants />
-</main>;
-}
-  
   // const [count, setCount] = useState(0)
 
   // return (
