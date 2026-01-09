@@ -5,16 +5,31 @@ import viteLogo from '/vite.svg'
 import Restaurants from "../components/Restaurants";
 import Books from "../components/Books";
 import BookTitle from "../components/BookTitle";
+import BookByAuthor from "../components/BookByAuthor";
+
+import Hotels from "../components/Hotels";
+import HotelsByTitle from "../components/HotelsByTitle";
 
 export default function App() {
 return (
         <main>
-          <h1>All Books</h1>
-          <Books />
-          <BookTitle title="Shoe Dog" />
+          <h1>All Hotels</h1>
+          <Hotels />
+          <HotelsByTitle title="Shoe Dog" />
         </main>
         );
 }
+
+// export default function App() {
+// return (
+//         <main>
+//           <h1>All Books</h1>
+//           <Books />
+//           <BookTitle title="Shoe Dog" />
+//           <BookByAuthor author="Harper Lee" />
+//         </main>
+//         );
+// }
 
 
   // function App() {

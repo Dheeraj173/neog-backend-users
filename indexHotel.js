@@ -6,6 +6,15 @@ const {initializeDatabase} = require("./BE1.1_CW/db/db.connect");
 const Hotel = require("./BE1.1_CW/models/Hotel.models");
 initializeDatabase();
 
+const cors = require("cors");
+  const corsOptions = {
+    origin: "*",
+    credentials: true,
+    optionSuccessStatus: 200,
+  };
+  
+  app.use(cors(corsOptions));
+
   const newHotel1 = {
     name: "Lake View",
     category: "Mid-Range",
