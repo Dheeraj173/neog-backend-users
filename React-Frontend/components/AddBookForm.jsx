@@ -15,7 +15,7 @@ const AddBookForm = () => {
 
     const handleChange = (e) => {
         const {name, value} = e.target;
-        setFromData((prevState) => ({
+        setFormData((prevState) => ({
             ...prevState,[name]:name==="publishedYear" || name==="rating"?parseInt(value):value,
         }));
     };
@@ -68,8 +68,8 @@ const AddBookForm = () => {
             <br />
             <input 
             type="text"
-            name="publishYear"
-            value={formData.publishYear}
+            name="publishedYear"
+            value={formData.publishedYear}
             onChange={handleChange}
             />{" "}
             <br />
@@ -139,3 +139,5 @@ const AddBookForm = () => {
         </div>
     )
 }
+
+export default AddBookForm;
