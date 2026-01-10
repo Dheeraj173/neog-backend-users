@@ -1,16 +1,16 @@
 import useFetch from "../src/useFetch";
 
 const HotelsByTitle = ({title}) => {
-    const {data, loading, error} = useFetch(`https://neog-backend-users.vercel.app/hotels/title/${title}`);
+    const {data, loading, error} = useFetch(`https://neog-backend-users.vercel.app/hotels/${title}`);
     console.log(data);
-    const hotel = data?data.hotels[0]:"";
+    const hotell = data?data.hotel:"";
 
     return data? (
         <div>
-            <h1>{hotel.title}</h1>
-            <p>Location: {hotel.location}</p>
-            <p>Rating: {hotel.rating}</p>
-            <p>Price Range: {hotel.price}</p>
+            <h1>{title}</h1>
+            <p>Location: {hotell.location}</p>
+            <p>Rating: {hotell.rating}</p>
+            <p>Price Range: {hotell.price}</p>
         </div>
     ):(loading && <p>loading...</p>)
 }

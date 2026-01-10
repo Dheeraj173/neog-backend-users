@@ -1,6 +1,6 @@
 import useFetch from "../src/useFetch";
 
-const Books = () => {
+const Hotels = () => {
     const {data, loading, error} = useFetch("https://neog-backend-users.vercel.app/hotels");
     console.log(data);
 
@@ -12,4 +12,4 @@ const Books = () => {
     </div>
     );
 }
-export default Books;
+export default Hotels;

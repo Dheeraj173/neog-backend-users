@@ -6,30 +6,31 @@ import Restaurants from "../components/Restaurants";
 import Books from "../components/Books";
 import BookTitle from "../components/BookTitle";
 import BookByAuthor from "../components/BookByAuthor";
+import AddBookForm from "../components/AddBookForm";
 
 import Hotels from "../components/Hotels";
 import HotelsByTitle from "../components/HotelsByTitle";
 
-export default function App() {
-return (
-        <main>
-          <h1>All Hotels</h1>
-          <Hotels />
-          <HotelsByTitle title="Shoe Dog" />
-        </main>
-        );
-}
-
 // export default function App() {
 // return (
 //         <main>
-//           <h1>All Books</h1>
-//           <Books />
-//           <BookTitle title="Shoe Dog" />
-//           <BookByAuthor author="Harper Lee" />
+//           <h1>All Hotels</h1>
+//           <AddHotelForm />
+//           <Hotels />
+//           <HotelsByTitle title="New Hotel" />
 //         </main>
 //         );
 // }
+
+export default function App() {
+return (
+        <main>
+          <h1>All Books</h1>
+          <AddBookForm />
+          <Books />
+        </main>
+        );
+}
 
 
   // function App() {
