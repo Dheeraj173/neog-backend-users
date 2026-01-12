@@ -11,17 +11,6 @@ import AddBookForm from "../components/AddBookForm";
 import Hotels from "../components/Hotels";
 import HotelsByTitle from "../components/HotelsByTitle";
 
-// export default function App() {
-// return (
-//         <main>
-//           <h1>All Hotels</h1>
-//           <AddHotelForm />
-//           <Hotels />
-//           <HotelsByTitle title="New Hotel" />
-//         </main>
-//         );
-// }
-
 export default function App() {
 return (
         <main>
@@ -32,6 +21,16 @@ return (
         );
 }
 
+// export default function App() {
+// return (
+//         <main>
+//           <h1>All Hotels</h1>
+//           <AddHotelForm />
+//           <Hotels />
+//           <HotelsByTitle title="New Hotel" />
+//         </main>
+//         );
+// }
 
   // function App() {
 //     return (
