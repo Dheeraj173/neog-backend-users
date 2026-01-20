@@ -37,15 +37,38 @@ const PRICE_RANGE_OPTIONS = [
   "Other"
 ];
 
+    // const handleChange = (e) => {
+    //     const {name, value, type , checked} = e.target;
+    //     setFormData((prevState) => ({
+    //         ...prevState,[name]:name==="rating"?parseInt(value):value,
+    //     }));
+    // };
+
     const handleChange = (e) => {
-        const {name, value} = e.target;
+        const { name, value, type, checked } = e.target;
+
         setFormData((prevState) => ({
-            ...prevState,[name]:name==="rating"?parseInt(value):value,
-        }));
-    };
+             ...prevState,
+                [name]:
+                type === "checkbox"
+                 ? checked
+                    : name === "rating"
+                    ? parseInt(value)
+                    : value,
+  }));
+};
 
     const handleSubmit = async(event) => {
         event.preventDefault()
+
+        const payload = {
+            ...formData,
+            category: [formData.category],
+            priceRange: [formData.priceRange],
+            amenities: formData.amenities.split(",").map(a => a.trim()),
+            photos: formData.photos.split(",").map(p => p.trim()),
+        };
+
         try {
             const response = await fetch("https://neog-backend-users.vercel.app/hotels",
                 {
