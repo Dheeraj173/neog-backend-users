@@ -58,34 +58,44 @@ const PRICE_RANGE_OPTIONS = [
   }));
 };
 
-    const handleSubmit = async(event) => {
-        event.preventDefault()
+    const handleSubmit = async (event) => {
+  event.preventDefault();
 
-        const payload = {
-            ...formData,
-            category: [formData.category],
-            priceRange: [formData.priceRange],
-            amenities: formData.amenities.split(",").map(a => a.trim()),
-            photos: formData.photos.split(",").map(p => p.trim()),
-        };
+  const payload = {
+    ...formData,
+    category: [formData.category],
+    priceRange: [formData.priceRange],
+    amenities: formData.amenities
+      ? formData.amenities.split(",").map(a => a.trim())
+      : [],
+    photos: formData.photos
+      ? formData.photos.split(",").map(p => p.trim())
+      : [],
+  };
 
-        try {
-            const response = await fetch("https://neog-backend-users.vercel.app/hotels",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(formData)
-                }
-            );
-            if(!response.ok) {
-                throw "Failed to add new Hotel in database."
-            }
-        } catch(error) {
-            console.log(error);
-        }
+  try {
+    const response = await fetch(
+      "https://neog-backend-users.vercel.app/hotels",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Backend error:", data);
+      throw new Error(data.message || "Failed to add hotel");
     }
+
+    console.log("Hotel added:", data);
+  } catch (error) {
+    console.error("Submit error:", error.message);
+  }
+};
+
 
     return (
         <div>

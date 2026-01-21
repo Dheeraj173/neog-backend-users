@@ -15,47 +15,47 @@ const cors = require("cors");
   
   app.use(cors(corsOptions));
 
-  const newHotel1 = {
-    name: "Lake View",
-    category: "Mid-Range",
-    location: "124 Main Street, Anytown",
-    rating: 3.2,
-    reviews: [],
-    website: "https://lake-view-example.com",
-    phoneNumber: "+1234555890",
-    checkInTime: "2:00 PM",
-    checkOutTime: "12:00 PM",
-    amenities: ["Laundry", "Boating"],
-    priceRange: "$$$ (31-60)",
-    reservationsNeeded: true,
-    isParkingAvailable: false,
-    isWifiAvailable: true,
-    isPoolAvailable: false,
-    isSpaAvailable: false,
-    isRestaurantAvailable: false,
-    photos: ["https://example.com/hotel1-photo1.jpg", "https://example.com/hotel1-photo2.jpg"],
-  };
+  // const newHotel1 = {
+  //   name: "Lake View",
+  //   category: "Mid-Range",
+  //   location: "124 Main Street, Anytown",
+  //   rating: 3.2,
+  //   reviews: [],
+  //   website: "https://lake-view-example.com",
+  //   phoneNumber: "+1234555890",
+  //   checkInTime: "2:00 PM",
+  //   checkOutTime: "12:00 PM",
+  //   amenities: ["Laundry", "Boating"],
+  //   priceRange: "$$$ (31-60)",
+  //   reservationsNeeded: true,
+  //   isParkingAvailable: false,
+  //   isWifiAvailable: true,
+  //   isPoolAvailable: false,
+  //   isSpaAvailable: false,
+  //   isRestaurantAvailable: false,
+  //   photos: ["https://example.com/hotel1-photo1.jpg", "https://example.com/hotel1-photo2.jpg"],
+  // };
 
-  const newHotel2 = {
-    name: "Sunset Resort",
-    category: "Resort",
-    location: "12 Main Road, Anytown",
-    rating: 4.0,
-    reviews: [],
-    website: "https://sunset-example.com",
-    phoneNumber: "+1299655890",
-    checkInTime: "2:00 PM",
-    checkOutTime: "11:00 AM",
-    amenities: ["Room Service", "Horse riding", "Boating", "Kids Play Area", "Bar"],
-    priceRange: "$$$$ (61+)",
-    reservationsNeeded: true,
-    isParkingAvailable: true,
-    isWifiAvailable: true,
-    isPoolAvailable: true,
-    isSpaAvailable: true,
-    isRestaurantAvailable: true,
-    photos: ["https://example.com/hotel2-photo1.jpg", "https://example.com/hotel2-photo2.jpg"],
-  };
+  // const newHotel2 = {
+  //   name: "Sunset Resort",
+  //   category: "Resort",
+  //   location: "12 Main Road, Anytown",
+  //   rating: 4.0,
+  //   reviews: [],
+  //   website: "https://sunset-example.com",
+  //   phoneNumber: "+1299655890",
+  //   checkInTime: "2:00 PM",
+  //   checkOutTime: "11:00 AM",
+  //   amenities: ["Room Service", "Horse riding", "Boating", "Kids Play Area", "Bar"],
+  //   priceRange: "$$$$ (61+)",
+  //   reservationsNeeded: true,
+  //   isParkingAvailable: true,
+  //   isWifiAvailable: true,
+  //   isPoolAvailable: true,
+  //   isSpaAvailable: true,
+  //   isRestaurantAvailable: true,
+  //   photos: ["https://example.com/hotel2-photo1.jpg", "https://example.com/hotel2-photo2.jpg"],
+  // };
 
   async function createHotel(hotel) {
     try {
@@ -72,8 +72,9 @@ const cors = require("cors");
     try {
       const createdHotel = await createHotel(req.body);
       if(createdHotel) {
-        res.status(201).json({createdHotel });
+        res.status(201).json({ createdHotel });
       } else {
+        console.log(createHotel);
         res.status(404).json({error: "No new Hotel created."});
       }
     } catch(error) {
