@@ -5,7 +5,7 @@ const AddHotelForm = () => {
         name:"", 
         category:"", 
         location:"",
-        rating:"",
+        rating:0,
         website:"",
         phoneNumber:"",
         checkInTime:"",
@@ -20,22 +20,6 @@ const AddHotelForm = () => {
         isRestaurantAvailable:false,
         photos:"",
     });
-
-    const CATEGORY_OPTIONS = [
-        "Budget",
-        "Mid-Range",
-        "Luxury",
-        "Boutique",
-        "Resort",
-        "Other"
-];
-
-const PRICE_RANGE_OPTIONS = [
-  "$$ (11-30)",
-  "$$$ (31-60)",
-  "$$$$ (61+)",
-  "Other"
-];
 
     // const handleChange = (e) => {
     //     const {name, value, type , checked} = e.target;
@@ -52,9 +36,12 @@ const PRICE_RANGE_OPTIONS = [
                 [name]:
                 type === "checkbox"
                  ? checked
-                    : name === "rating"
-                    ? parseInt(value)
-                    : value,
+                 : type === "number"
+        ? Number(value)
+        : value,
+                    // : name === "rating"||name===checkInTime||name===checkOutTime
+                    // ? parseInt(value)
+                    // : value,
   }));
 };
 
@@ -115,11 +102,12 @@ const PRICE_RANGE_OPTIONS = [
             <br />
             <select name="category" value={formData.category} onChange={handleChange} required>
             <option value="">Select category</option>
-            {CATEGORY_OPTIONS.map((cat) => (
-                 <option key={cat} value={cat}>
-                    {cat}
-                </option>
-            ))}
+            <option value="BUDGET">Budget</option>
+            <option value="Mid-Range">Mid-Range</option>
+            <option value="Luxury">Luxury</option>
+            <option value="Boutique">Boutique</option>
+            <option value="Resort">Resort</option>
+            <option value="Other">Other</option>
             </select>
             <br />
             <br />
@@ -193,23 +181,18 @@ const PRICE_RANGE_OPTIONS = [
             />{" "}
             <br />
             <br />
-            <label>Price Range: </label>
+        <label>Price Range:</label>
             <br />
-            <select 
-            name="pricesRange" 
-            value={formData.priceRange} 
-            onChange={handleChange}
-            >
-            <option value="">Select price range</option>
-                {PRICE_RANGE_OPTIONS.map((price) => (
-                    <option key={price} value={price}>
-                    {price}
-                    </option>
-                ))}
+            <select name="priceRange" value={formData.priceRange} onChange={handleChange}>
+                <option value="">Select price range</option>
+                <option value="$$ (11-30)">$$ (11-30)</option>
+                <option value="$$$ (31-60)">$$$ (31-60)</option>
+                <option value="$$$$ (61+)">$$$$ (61+)</option>
+                <option value="Other">Other</option>
             </select>
             <br />
             <br />
-            <label>Reservations Needed: </label>
+        <label>Reservations Needed: </label>
             <br />
             <input 
             type="checkbox"

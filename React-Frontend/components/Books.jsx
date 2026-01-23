@@ -5,11 +5,14 @@ const Books = () => {
     console.log(data);
 
     return (
-    <div>
+    <div>  
         <ul>
-            {data?.books.map((book)=>(<li>{book.title}</li>))}
+            {data?.books.map((book)=>(<li>{book.title}{"  "}<button></button></li>))}
         </ul>
     </div>
     );
 }
 export default Books;
+
+//{loading && <p>Loading...</p>}
+  //      {data?.error && <p>{data?.error}</p>}
