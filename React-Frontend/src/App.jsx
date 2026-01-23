@@ -14,26 +14,26 @@ import AddHotelForm from "../components/AddHotelForm";
 
 
 
-// export default function App() {
-// return (
-//         <main>
-//           <h1>All Hotels</h1>
-//           <AddHotelForm />
-//           <Hotels />
-//           <HotelsByTitle title="New Hotel" />
-//         </main>
-//         );
-// }
-
 export default function App() {
 return (
         <main>
-          <h1>All Books</h1>
-          <AddBookForm />
-          <Books />
+          <h1>All Hotels</h1>
+          <AddHotelForm />
+          <Hotels />
+          <HotelsByTitle title="New Hotel" />
         </main>
         );
 }
+
+// export default function App() {
+// return (
+//         <main>
+//           <h1>All Books</h1>
+//           <AddBookForm />
+//           <Books />
+//         </main>
+//         );
+// }
 
   // function App() {
 //     return (

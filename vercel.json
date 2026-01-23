@@ -1,1 +1,1 @@
-{ "version": 2, "builds": [{ "src": "indexBook.js", "use": "@vercel/node" }], "rewrites": [{ "source": "/(.*)", "destination": "indexBook.js" }] }
+{ "version": 2, "builds": [{ "src": "indexHotel.js", "use": "@vercel/node" }], "rewrites": [{ "source": "/(.*)", "destination": "indexHotel.js" }] }
