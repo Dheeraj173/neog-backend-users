@@ -12,18 +12,24 @@ import Hotels from "../components/Hotels";
 import HotelsByTitle from "../components/HotelsByTitle";
 import AddHotelForm from "../components/AddHotelForm";
 
-
-
 export default function App() {
 return (
         <main>
-          <h1>All Hotels</h1>
-          <AddHotelForm />
+          <h1>All Events</h1>
           <Hotels />
-          <HotelsByTitle title="New Hotel" />
         </main>
         );
 }
+
+// export default function App() {
+// return (
+//         <main>
+//           <h1>All Hotels</h1>
+//           <AddHotelForm />
+//           <Hotels />
+//         </main>
+//         );
+// }
 
 // export default function App() {
 // return (

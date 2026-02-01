@@ -54,7 +54,7 @@ const restaurant1 = {
         console.log("New Restaurant created: ", createNewRestaurant);
         return createNewRestaurant;
     } catch(error) {
-        console.log("Error while creating Book: ", error);
+        console.log("Error while creating Restaurant: ", error);
     }
   }
 

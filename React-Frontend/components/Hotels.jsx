@@ -1,6 +1,8 @@
+import { useState } from "react";
 import useFetch from "../src/useFetch";
 
 const Hotels = () => {
+    const [successMessage, setSuccessMessage] = useState("");
     const {data, loading, error} = useFetch("https://neog-backend-users.vercel.app/hotels");
     console.log(data);
 
@@ -27,9 +29,9 @@ const Hotels = () => {
     <div>
         <ul>
             {data?.hotels.map((hotel)=>(<li key={hotel._id}>{hotel.name}{"  "}
-                <button onClick={()=> handleDelete(hotel._id)}>Delete Hotel</button>
-            </li>))}
+                <button onClick={()=> handleDelete(hotel._id)}>Delete Hotel</button></li>))}
         </ul>
+        <p>{successMessage}</p>
     </div>
     );
 }
