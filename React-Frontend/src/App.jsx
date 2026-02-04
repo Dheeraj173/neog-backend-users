@@ -1,25 +1,37 @@
-import { useState } from "react";
-import Events from "../components/Events";
-import EventDetails from "../components/EventDetails";
+import Events from "./Events";
 
 export default function App() {
-  const [selectedEventId, setSelectedEventId] = useState(null);
-
   return (
     <main>
       <h1>All Events</h1>
-
-      {selectedEventId ? (
-        <EventDetails
-          eventId={selectedEventId}
-          goBack={() => setSelectedEventId(null)}
-        />
-      ) : (
-        <Events onSelectEvent={setSelectedEventId} />
-      )}
+      <Events />
     </main>
   );
 }
+
+
+// import { useState } from "react";
+// import Events from "../components/Events";
+// import EventDetails from "../components/EventDetails";
+
+// export default function App() {
+//   const [selectedEventId, setSelectedEventId] = useState(null);
+
+//   return (
+//     <main>
+//       <h1>All Events</h1>
+
+//       {selectedEventId ? (
+//         <EventDetails
+//           eventId={selectedEventId}
+//           goBack={() => setSelectedEventId(null)}
+//         />
+//       ) : (
+//         <Events onSelectEvent={setSelectedEventId} />
+//       )}
+//     </main>
+//   );
+// }
 
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
