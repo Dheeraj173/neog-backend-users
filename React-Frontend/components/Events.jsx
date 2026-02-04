@@ -32,26 +32,5 @@ const Events = ({ onSelectEvent }) => {
 
 export default Events;
 
-// const Events = () => {
-//   const { data, loading, error } = useFetch(
-//     "https://neog-backend-users.vercel.app/events"
-//   );
-// //https://neog-backend-users.vercel.app/events/${eventId}` for id
-//   if (loading) return <p>Loading events...</p>;
-//   if (error) return <p>Error loading events</p>;
-
-//   return (
-//     <div className="container">
-//       <div className="row">
-//         {data?.map((event) => (
-//           <div className="col-md-4 mb-4" key={event._id}>
-//             <EventCard event={event} />
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
 
 

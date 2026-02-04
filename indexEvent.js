@@ -22,7 +22,7 @@ const cors = require("cors");
     "date": "2023-07-13",
     "time": "07:00 AM IST",
     "price": 0,
-    "image": "https://via.placeholder.com/400",
+    "image": "https://images.stockcake.com/public/6/8/e/68eb5183-ae69-4606-b384-4cfb8ce1fb05_large/tech-conference-speech-stockcake.jpg",
     "tags": ["tech", "design"],
     "description": "A conference about latest tech trends.",
     "venue": "Tech Park, Bangalore",
@@ -39,7 +39,7 @@ const cors = require("cors");
     "date": "2023-08-15",
     "time": "10:00 AM - 12:00 PM",
     "price": 3000,
-    "image": "https://via.placeholder.com/400",
+    "image": "https://media.gettyimages.com/id/1367899893/photo/multi-racial-diverse-group-of-people-working-with-paperwork-on-a-board-room-table-at-a.jpg?s=612x612&w=gi&k=20&c=9oHr7GSUfDVqlyQ2zFrkop_eIiUkf_qB2K4wUitoIfs=",
     "tags": ["marketing", "digital"],
     "description": "Learn latest digital marketing strategies.",
     "venue": "Marketing City, 789 Marketing Avenue",
@@ -61,8 +61,8 @@ const cors = require("cors");
           console.log("Error while creating Event: ", error);
       }
     }
-    //createEvent(event1);
-    //createEvent(event2);
+    createEvent(event1);
+    createEvent(event2);
 
     async function readEventsData() {
         try {
@@ -73,7 +73,7 @@ const cors = require("cors");
             console.log("Error occuered while reading Events data: ", error);
         }
       }
-      //readEventsData();
+      readEventsData();
 
         app.get("/events", async (req, res) => {
             try {
