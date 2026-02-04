@@ -1,6 +1,6 @@
 import { useState } from "react";
-import useFetch from "./useFetch";
-import EventDetails from "./EventDetails";
+import useFetch from "../src/useFetch";
+import EventDetails from "../components/EventDetails";
 
 const Events = () => {
   const [selectedEventId, setSelectedEventId] = useState(null);
