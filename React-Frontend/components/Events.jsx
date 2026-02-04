@@ -23,22 +23,56 @@ const Events = () => {
     );
   }
 
-  // 👇 ELSE show list
   return (
-    <ul>
-      {data.map((event) => (
-        <li key={event._id}>
-          <h3>{event.title}</h3>
-          <p>{event.date} • {event.time}</p>
+    <div className="container">
+      <div className="row">
+        {data.map((event) => (
+          <div className="col-md-4 mb-4" key={event._id}>
+            <div className="card h-100 shadow-sm">
+              <img
+                src={event.image || "https://via.placeholder.com/400"}
+                className="card-img-top"
+                alt={event.title}
+              />
 
-          <button onClick={() => setSelectedEventId(event._id)}>
-            View Details
-          </button>
-        </li>
-      ))}
-    </ul>
+              <div className="card-body d-flex flex-column">
+                <h5 className="card-title">{event.title}</h5>
+
+                <p className="card-text text-muted">
+                  {event.date} • {event.time}
+                </p>
+
+                <button
+                  className="btn btn-primary mt-auto"
+                  onClick={() => setSelectedEventId(event._id)}
+                >
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
   );
 };
+
+  // 👇 ELSE show list
+//   return (
+//     <ul>
+//       {data.map((event) => (
+//         <li key={event._id}>
+//           <h3>{event.title}</h3>
+//           <p>{event.date} • {event.time}</p>
+
+//           <button onClick={() => setSelectedEventId(event._id)}>
+//             View Details
+//           </button>
+//         </li>
+//       ))}
+//     </ul>
+//   );
+// };
 
 export default Events;
 
