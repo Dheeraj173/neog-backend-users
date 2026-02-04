@@ -2,11 +2,12 @@ import useFetch from "../src/useFetch";
 
 const EventDetails = ({ eventId, goBack }) => {
   const { data, loading, error } = useFetch(
-    `https://YOUR-VERCEL-BACKEND-URL/events/${eventId}`
+    `https://neog-backend-users.vercel.app/events/${eventId}`
   );
 
   if (loading) return <p>Loading event...</p>;
   if (error) return <p>Error loading event</p>;
+  if (!data) return null;
 
   return (
     <div>

@@ -23,7 +23,7 @@ const cors = require("cors");
     "time": "07:00 AM IST",
     "price": 0,
     "image": "https://via.placeholder.com/400",
-    "tags": ["tech", "conference"],
+    "tags": ["tech", "design"],
     "description": "A conference about latest tech trends.",
     "venue": "Tech Park, Bangalore",
     "speakers": [
@@ -61,8 +61,8 @@ const cors = require("cors");
           console.log("Error while creating Event: ", error);
       }
     }
-    createEvent(event1);
-    createEvent(event2);
+    //createEvent(event1);
+    //createEvent(event2);
 
     async function readEventsData() {
         try {
@@ -73,7 +73,7 @@ const cors = require("cors");
             console.log("Error occuered while reading Events data: ", error);
         }
       }
-      readEventsData();
+      //readEventsData();
 
         app.get("/events", async (req, res) => {
             try {
