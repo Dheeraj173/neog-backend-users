@@ -75,4 +75,31 @@ const cors = require("cors");
       }
       //readEventsData();
 
+        app.get("/events", async (req, res) => {
+            try {
+                //const events = await Event.find();
+                const events = await readEventsData();
+                console.log(events);
+                if(events) {
+                    res.status(200).json(events);
+                } else {
+                    res.status(404).json({error: "No Events found."})
+                }
+            } catch (error) {
+                res.status(500).json({ error: "Failed to fetch events" });
+            }
+        });
+
+        app.get("/events/:id", async (req, res) => {
+            try {
+                const event = await Event.findById(req.params.id);
+                if (!event) {
+                    return res.status(404).json({ error: "Event not found" });
+                }
+                res.status(200).json(event);
+            } catch (error) {
+                res.status(500).json({ error: "Failed to fetch event" });
+            }
+        });
+
       app.listen(port, ()=> {console.log("server is running at port: ", port)});

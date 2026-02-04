@@ -1,25 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-//import './App.css'
-import Restaurants from "../components/Restaurants";
-import Books from "../components/Books";
-import BookTitle from "../components/BookTitle";
-import BookByAuthor from "../components/BookByAuthor";
-import AddBookForm from "../components/AddBookForm";
-
-import Hotels from "../components/Hotels";
-import HotelsByTitle from "../components/HotelsByTitle";
-import AddHotelForm from "../components/AddHotelForm";
+import { useState } from "react";
+import Events from "../components/Events";
+import EventDetails from "../components/EventDetails";
 
 export default function App() {
-return (
-        <main>
-          <h1>All Events</h1>
-          <Hotels />
-        </main>
-        );
+  const [selectedEventId, setSelectedEventId] = useState(null);
+
+  return (
+    <main>
+      <h1>All Events</h1>
+
+      {selectedEventId ? (
+        <EventDetails
+          eventId={selectedEventId}
+          goBack={() => setSelectedEventId(null)}
+        />
+      ) : (
+        <Events onSelectEvent={setSelectedEventId} />
+      )}
+    </main>
+  );
 }
+
+// import { useState } from 'react'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
+//import './App.css'
+// import Restaurants from "../components/Restaurants";
+// import Books from "../components/Books";
+// import BookTitle from "../components/BookTitle";
+// import BookByAuthor from "../components/BookByAuthor";
+// import AddBookForm from "../components/AddBookForm";
+
+// import Hotels from "../components/Hotels";
+// import HotelsByTitle from "../components/HotelsByTitle";
+// import AddHotelForm from "../components/AddHotelForm";
 
 // export default function App() {
 // return (

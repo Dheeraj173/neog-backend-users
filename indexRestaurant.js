@@ -305,6 +305,4 @@ async function updateDelieveryOfRestanrant(number, dataToUpdate) {
   }
   //deleteRestaurantByName("Som Sarovar");
 
-  
-
 app.listen(port, ()=> {console.log("server is running at port: ", port)});
