@@ -61,8 +61,8 @@ const cors = require("cors");
           console.log("Error while creating Event: ", error);
       }
     }
-    //createEvent(event1);
-    //createEvent(event2);
+    createEvent(event1);
+    createEvent(event2);
 
     async function readEventsData() {
         try {
@@ -73,7 +73,7 @@ const cors = require("cors");
             console.log("Error occuered while reading Events data: ", error);
         }
       }
-      //readEventsData();
+      readEventsData();
 
         app.get("/events", async (req, res) => {
             try {
