@@ -10,14 +10,12 @@ const EventDetails = ({ eventId, onBack }) => {
   if (!data) return null;
 
   return (
-    <div className="container mt-4">
-      <button className="btn btn-link mb-3" onClick={onBack}>
-        ⬅ Back to Events
-      </button>
+    <div className="container ps-5">
+      
 
-      <div className="card shadow">
+      <div>
         <img
-          src={data.image || "https://via.placeholder.com/600"}
+          src={data.image}
           className="card-img-top"
           alt={data.title}
         />
@@ -25,14 +23,12 @@ const EventDetails = ({ eventId, onBack }) => {
         <div className="card-body">
           <h3 className="card-title">{data.title}</h3>
 
-          <p className="text-muted">
+          <p>
             {data.date} • {data.time} • {data.type}
           </p>
 
           <p><b>Venue:</b> {data.venue}</p>
           <p><b>Price:</b> ₹{data.price}</p>
-
-          <hr />
 
           <h5>Description</h5>
           <p>{data.description}</p>
@@ -51,12 +47,15 @@ const EventDetails = ({ eventId, onBack }) => {
 
           <div className="mt-3">
             {data.tags.map((tag) => (
-              <span key={tag} className="badge bg-secondary me-2">
-                #{tag}
-              </span>
+              <button className="btn btn-secondary me-2">
+                  {tag}
+              </button>
             ))}
           </div>
         </div>
+        <button className="btn btn-primary mt-3 mb-3" onClick={onBack}>
+        Back
+      </button>
       </div>
     </div>
   );

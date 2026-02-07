@@ -6,14 +6,12 @@ const Events = () => {
   const [selectedEventId, setSelectedEventId] = useState(null);
 
   const { data, loading, error } = useFetch(
-    "https://neog-backend-users.vercel.app/events",
-    []
+    "https://neog-backend-users.vercel.app/events",[]
   );
 
   if (loading) return <p>Loading events...</p>;
   if (error) return <p>Error loading events</p>;
 
-  // 👇 IF an event is selected → show details
   if (selectedEventId) {
     return (
       <EventDetails
@@ -24,13 +22,13 @@ const Events = () => {
   }
 
   return (
-    <div className="container">
+    <div className="container ps-5">
       <div className="row">
         {data.map((event) => (
           <div className="col-md-4 mb-4" key={event._id}>
-            <div className="card h-100 shadow-sm">
+            <div className="card">
               <img
-                src={event.image || "https://via.placeholder.com/400"}
+                src={event.image}
                 className="card-img-top"
                 alt={event.title}
               />
@@ -38,7 +36,7 @@ const Events = () => {
               <div className="card-body d-flex flex-column">
                 <h5 className="card-title">{event.title}</h5>
 
-                <p className="card-text text-muted">
+                <p className="card-text">
                   {event.date} • {event.time}
                 </p>
 
