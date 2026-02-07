@@ -54,60 +54,8 @@ const Events = () => {
     </div>
   );
 };
-
-  // 👇 ELSE show list
-//   return (
-//     <ul>
-//       {data.map((event) => (
-//         <li key={event._id}>
-//           <h3>{event.title}</h3>
-//           <p>{event.date} • {event.time}</p>
-
-//           <button onClick={() => setSelectedEventId(event._id)}>
-//             View Details
-//           </button>
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// };
-
 export default Events;
 
-
-// import useFetch from "../src/useFetch";
-
-// const Events = ({ onSelectEvent }) => {
-//   const { data, loading, error } = useFetch(
-//     "https://neog-backend-users.vercel.app/events",[]
-//   );
-// // //https://neog-backend-users.vercel.app/events/${eventId}` for id
-//   if (loading) return <p>Loading events...</p>;
-//   if (error) return <p>Error loading events</p>;
-
-//   return (
-//     <ul>
-//       {data?.map((event) => (
-//         <li key={event._id}>
-//           <h3>{event.title}</h3>
-//           <img
-//             src={event.image}
-//             alt={event.title}
-//             width="250"
-//           />
-//           <p>
-//             {event.date} • {event.time} • {event.type}
-//           </p>
-//           <button onClick={() => onSelectEvent(event._id)}>
-//             View Details
-//           </button>
-//         </li>
-//       ))}
-//     </ul>
-//   );
-// };
-
-// export default Events;
 
 
 
