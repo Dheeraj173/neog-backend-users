@@ -6,7 +6,8 @@ const Events = () => {
   const [selectedEventId, setSelectedEventId] = useState(null);
 
   const { data, loading, error } = useFetch(
-    "https://neog-backend-users.vercel.app/events",[]
+    "https://neog-backend-users-yd9x.vercel.app/events", []
+    //"https://neog-backend-users.vercel.app/events",[]
   );
 
   if (loading) return <p>Loading events...</p>;
