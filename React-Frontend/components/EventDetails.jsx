@@ -2,7 +2,7 @@ import useFetch from "../src/useFetch";
 
 const EventDetails = ({ eventId, onBack }) => {
   const { data, loading, error } = useFetch(
-       `https://neog-backend-users-yd9x.vercel.app/events/${eventId}`
+       `https://neog-backend-users-ya26.vercel.app/events/${eventId}`
     //`https://neog-backend-users.vercel.app/events/${eventId}`
   );
 
