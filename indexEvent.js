@@ -39,7 +39,7 @@ const cors = require("cors");
     "date": "2023-08-15",
     "time": "10:00 AM - 12:00 PM",
     "price": 3000,
-    "image": "https://www.freepik.com/free-psd/digital-marketing-live-webinar-corporate-social-media-post-template_417085748.htm#fromView=keyword&page=1&position=2&uuid=f1a8c034-ea9e-4774-8a20-993c61e162a9&query=Marketing+seminar",
+    "image": "https://pixabay.com/get/g45f35f1f04523d78db98f8381a14fb2fbbf8fa5f38a11989fef4960b1190f360cb5cdb1a37c87c78c22957655c809d4b9d7f5fbbdd6c2c7ad8a55dcadfc1c3f1_1280.jpg",
     "tags": ["marketing", "digital"],
     "description": "Learn latest digital marketing strategies.",
     "venue": "Marketing City, 789 Marketing Avenue",
@@ -111,7 +111,7 @@ const event5 = {
       }
     }
   
-    createEvent(event4);
+    createEvent(event2);
 
     async function readEventsData() {
         try {
