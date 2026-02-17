@@ -26,8 +26,8 @@ const Events = () => {
     <div className="container ps-5">
       <div className="row">
         {data.map((event) => (
-          <div className="col-md-4 mb-4" key={event._id}>
-            <div className="card">
+          <div className="col-md-4 mb-4 d-flex" key={event._id}>
+            <div className="card h-100 w-100">
               <img
                 src={event.image}
                 className="card-img-top"

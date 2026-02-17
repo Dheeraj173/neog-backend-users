@@ -51,6 +51,55 @@ const cors = require("cors");
     "ageRestriction": "18+"
   };
 
+  const event3 = {
+  title: "Startup Networking Meetup",
+  type: "Offline",
+  date: "2023-09-10",
+  time: "05:00 PM IST",
+  price: 500,
+  image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
+  tags: ["startup", "networking"],
+  description: "Meet founders and investors in an exciting networking event.",
+  venue: "WeWork, Mumbai",
+  speakers: [
+    { name: "Ankit Mehra", role: "Startup Founder" }
+  ],
+  dressCode: "Business Casual",
+  ageRestriction: "21+"
+};
+
+const event4 = {
+  title: "AI & Machine Learning Workshop",
+  type: "Online",
+  date: "2023-10-05",
+  time: "06:00 PM - 09:00 PM",
+  price: 2000,
+  image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
+  tags: ["AI", "ML", "technology"],
+  description: "Hands-on workshop on AI & Machine Learning fundamentals.",
+  venue: "Zoom",
+  speakers: [
+    { name: "Priya Sharma", role: "ML Engineer" }
+  ],
+  dressCode: "Casual",
+  ageRestriction: "18+"
+};
+
+const event5 = {
+  title: "Music Fest 2023",
+  type: "Offline",
+  date: "2023-11-20",
+  time: "04:00 PM IST",
+  price: 1500,
+  image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
+  tags: ["music", "festival"],
+  description: "An evening full of live performances and fun.",
+  venue: "City Stadium, Delhi",
+  speakers: [],
+  dressCode: "Casual",
+  ageRestriction: "All ages"
+};
+
   async function createEvent(event) {
       try {
           const newEvent = new Event(event);
@@ -61,8 +110,9 @@ const cors = require("cors");
           console.log("Error while creating Event: ", error);
       }
     }
-    //createEvent(event1);
-    //createEvent(event2);
+    createEvent(event3);
+    createEvent(event4);
+    createEvent(event5);
 
     async function readEventsData() {
         try {
