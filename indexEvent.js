@@ -75,7 +75,7 @@ const event4 = {
   time: "06:00 PM - 09:00 PM",
   price: 2000,
   image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
-  tags: ["Design"],
+  tags: ["design"],
   description: "Hands-on workshop on AI & Machine Learning fundamentals.",
   venue: "Zoom",
   speakers: [
@@ -110,9 +110,8 @@ const event5 = {
           console.log("Error while creating Event: ", error);
       }
     }
-    createEvent(event3);
+  
     createEvent(event4);
-    createEvent(event5);
 
     async function readEventsData() {
         try {
