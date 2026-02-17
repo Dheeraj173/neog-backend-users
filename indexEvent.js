@@ -39,7 +39,7 @@ const cors = require("cors");
     "date": "2023-08-15",
     "time": "10:00 AM - 12:00 PM",
     "price": 3000,
-    "image": "https://media.gettyimages.com/id/1367899893/photo/multi-racial-diverse-group-of-people-working-with-paperwork-on-a-board-room-table-at-a.jpg?s=612x612&w=gi&k=20&c=9oHr7GSUfDVqlyQ2zFrkop_eIiUkf_qB2K4wUitoIfs=",
+    "image": "https://www.freepik.com/free-psd/digital-marketing-live-webinar-corporate-social-media-post-template_417085748.htm#fromView=keyword&page=1&position=2&uuid=f1a8c034-ea9e-4774-8a20-993c61e162a9&query=Marketing+seminar",
     "tags": ["marketing", "digital"],
     "description": "Learn latest digital marketing strategies.",
     "venue": "Marketing City, 789 Marketing Avenue",
