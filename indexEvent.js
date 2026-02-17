@@ -58,7 +58,7 @@ const cors = require("cors");
   time: "05:00 PM IST",
   price: 500,
   image: "https://images.unsplash.com/photo-1556761175-b413da4baf72",
-  tags: ["startup", "networking"],
+  tags: ["tech"],
   description: "Meet founders and investors in an exciting networking event.",
   venue: "WeWork, Mumbai",
   speakers: [
@@ -75,7 +75,7 @@ const event4 = {
   time: "06:00 PM - 09:00 PM",
   price: 2000,
   image: "https://images.unsplash.com/photo-1504639725590-34d0984388bd",
-  tags: ["AI", "ML", "technology"],
+  tags: ["Design"],
   description: "Hands-on workshop on AI & Machine Learning fundamentals.",
   venue: "Zoom",
   speakers: [
@@ -92,7 +92,7 @@ const event5 = {
   time: "04:00 PM IST",
   price: 1500,
   image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30",
-  tags: ["music", "festival"],
+  tags: ["marketing"],
   description: "An evening full of live performances and fun.",
   venue: "City Stadium, Delhi",
   speakers: [],
