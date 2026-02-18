@@ -111,7 +111,7 @@ const event5 = {
       }
     }
   
-    createEvent(event2);
+    //createEvent(event2);
 
     async function readEventsData() {
         try {
