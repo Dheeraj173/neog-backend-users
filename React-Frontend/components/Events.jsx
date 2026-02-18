@@ -8,7 +8,7 @@ const Events = () => {
   const [filterType, setFilterType] = useState("All");
 
   const { data, loading, error } = useFetch(
-    "https://neog-backend-users-ya26.vercel.app/events",
+    "https://neog-backend-users.vercel.app/events",
     []
   );
 
