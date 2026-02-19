@@ -67,7 +67,11 @@ const Events = () => {
       <div className="row">
         {filteredEvents.length > 0 ? (
           filteredEvents.map((event) => (
-            <div className="col-md-4 mb-4 d-flex" key={event._id}>
+            <div className={
+    filteredEvents.length === 1
+      ? "col-12 mb-4 d-flex"
+      : "col-12 col-sm-6 col-md-4 mb-4 d-flex"
+  } key={event._id}>
               <div className="card h-100 w-100 shadow-sm">
                 <img
                   src={event.image}
