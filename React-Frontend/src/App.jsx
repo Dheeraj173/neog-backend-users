@@ -2,8 +2,8 @@ import Events from "../components/Events";
 
 export default function App() {
   return (
-    <main>
-      <h1>All Events</h1>
+    <main className="container mt-4">
+      <h1 className="mb-4">All Events</h1>
       <Events />
     </main>
   );
