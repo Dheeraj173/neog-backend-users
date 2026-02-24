@@ -11,7 +11,7 @@ const EventDetails = ({ eventId, onBack }) => {
   if (!data) return null;
 
   return (
-    <div className="container ps-5">
+    <div>
       
 
       <div>

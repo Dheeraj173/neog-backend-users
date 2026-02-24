@@ -37,7 +37,7 @@ const Events = () => {
   }
 
   return (
-    <div className="container ps-5">
+    <div>
       {/* 🔍 Search + Filter Section */}
       <div className="row mb-4">
         <div className="col-md-6">
