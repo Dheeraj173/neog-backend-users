@@ -37,7 +37,7 @@ const Events = () => {
   }
 
   return (
-    <div>
+    <>
       {/* 🔍 Search + Filter Section */}
       <div className="row mb-4">
         <div className="col-md-6">
@@ -75,7 +75,7 @@ const Events = () => {
               <div className="card h-100 w-100 shadow-sm">
                 <img
                   src={event.image}
-                  className="card-img-top"
+                  className="card-img-top img-fluid"
                   alt={event.title}
                   style={{
                     height: "200px",
@@ -108,7 +108,7 @@ const Events = () => {
           <p>No events found.</p>
         )}
       </div>
-    </div>
+    </>
   );
 };
 

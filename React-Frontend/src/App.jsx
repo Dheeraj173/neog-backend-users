@@ -2,7 +2,7 @@ import Events from "../components/Events";
 
 export default function App() {
   return (
-    <main className="container mt-4">
+    <main className="container-fluid">
       <h1 className="mb-4">All Events</h1>
       <Events />
     </main>

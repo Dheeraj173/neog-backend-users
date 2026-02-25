@@ -17,7 +17,7 @@ const EventDetails = ({ eventId, onBack }) => {
       <div>
         <img
           src={data.image}
-          className="card-img-top"
+          className="card-img-top img-fluid"
           alt={data.title}
         />
 
